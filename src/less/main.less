@@ -16,7 +16,7 @@ body {
     margin: 0px auto;
 }
 
-.clearfix:after {
+.clearfix:after{
     content: "";
     display: table;
     clear: both;
@@ -38,17 +38,7 @@ header{
 }
 
 .header_menu-text{
-    float: left;
-    padding: 0;
-    margin: 10px 0px 0px 0px; 
-    font-family:  @fonf;
-    font-size: @f-s-sm;
-    text-align: @tal;
-    font-weight: normal;
-    line-height: @l-h;
-    letter-spacing: @l-s;
-    color: @main-color;
-    text-decoration: none;
+   .text(@m: 10px 0px 0px 0px, @c: @main-color);
 }   
 
 .header_search{
@@ -86,3 +76,118 @@ header{
     margin: 0px 33px 0px 59px;
 }
 
+.breadcrumbs{
+    float: left;
+    margin: 10px 0px 60px 0px;
+}
+
+.breadcrumbs_menu{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.breadcrumbs_menu li{
+    float: left;
+    margin-right: 45px;
+    display: block;
+}
+
+.breadcrumbs_menu_item{
+    .text();
+}
+
+h1{
+    .text(@m: 0px 0px 28px 0px,@fon-s: 54px, @c: @main-color, @fw: bold);
+}
+
+p{
+    .text(@m: 0px 0px 40px 0px, @fon-s: @f-s-l, @lih: 1.5em);
+}
+
+.colours{
+    float: left;
+    width: 226px;
+    margin: 0px 0px 30px 0px;
+}
+
+h3{
+    .text(@m: 0px 29px 0px 0px, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+}
+
+.colours-range{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.colours-range li{
+    float: left;
+    display: block;
+    margin-right: 31px;
+    
+    &:last-child{
+        margin-right: 0px;
+    }
+}
+
+.colours-range_icon{
+    width: 22px;
+    height: 22px;
+    display: block;
+    float: left;
+}
+
+.sizes{
+    float: left;
+    width: 50%;
+    margin: 0px 0px 49px 0px;
+}
+
+.sizes-range{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.sizes-range li{
+    float: left;
+    display: block;
+    margin-right: 34px;
+    
+    &:last-child{
+        margin-right: 0px;
+    }
+}
+
+.sizes-range_icon{
+    .text(@m: 5px 0px 0px 0px, @fon-s: 18px, @fw: bold);
+}
+
+.price{
+    .text(@m: 0px 0px 60px 0px, @fon-s: 36px, @c: #6D5F56);
+    width: 50%;
+}
+
+.button{
+    display: block;
+    padding: 10px 0px;
+    float: left;
+    border: 1px solid @main-color;
+    width: 303px;
+    // height: 56px;
+    text-align: center;
+    margin: 0px 0px 59px 120px;
+}
+
+.button_text{
+    padding: 0;
+    margin: 0;
+    font-family: @fonf;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.5em;
+    letter-spacing: @l-s;
+    color: @main-color;
+    text-decoration: none;
+}
