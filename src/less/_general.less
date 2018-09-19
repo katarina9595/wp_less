@@ -23,3 +23,22 @@
     color: @c;
     text-decoration: none;
 }
+
+.line(@c:@main-color, @h: 1px){
+
+    &:after {
+        background-color: @c;
+        display: block;
+        margin: 3px auto;
+        content: "";
+        height: @h;
+        width: 0%;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+        }
+        &:hover:after,
+        &:focus:after {
+            width: 80%;
+        }
+}

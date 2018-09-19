@@ -38,6 +38,7 @@ header{
 
 .header_menu-text{
    .text(@m: 10px 0px 0px 0px, @c: @main-color);
+    .line();
 }   
 
 .header_search{
@@ -93,6 +94,7 @@ header{
     }
     &_item{
         .text();
+        .line(@c: @text-color);
     }
 }
 
@@ -143,6 +145,7 @@ p{
     height: 22px;
     display: block;
     float: left;
+    .line(@h: 2px);
 }
 
 .sizes{
@@ -173,6 +176,7 @@ p{
 
 .sizes-range_icon{
     .text(@m: 5px 0px 0px 0px, @fon-s: 18px, @fw: bold);
+    .line(@h: 2px);
 }
 
 .price{
@@ -187,7 +191,7 @@ p{
     border: 1.5px solid @main-color;
     width: 303px;
     text-align: center;
-    margin: 0px 0px 59px 120px;
+    margin: 0px 0px 0px 120px;
 
     &_text{
         padding: 0;
@@ -199,6 +203,10 @@ p{
         letter-spacing: @l-s;
         color: @main-color;
         text-decoration: none;
+
+        &:hover{
+            font-weight: bold;
+        }
     }
 }
 
@@ -219,6 +227,7 @@ p{
 
 .rating-block_reviews_text{
     .text(@m: 4px 0px 0px 0px);
+    .line(@c: @text-color);
 }
 
 footer{
@@ -258,6 +267,7 @@ input[type="email"]::-moz-placeholder {
 
     &_text{
         .text(@m: 15px 0px 0px 0px, @c:rgba(0, 0, 0, 0.38));
+        .line(@c: @text-color);
     }
 }
 
