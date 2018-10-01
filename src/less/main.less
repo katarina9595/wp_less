@@ -7,12 +7,19 @@ body {
     margin: 0px;
     color: @text-color;
     font-family: @fonf;
+
+    @media @desktop {
     background: url('@{path}/background.jpg') no-repeat left top;
     background-size: 40% 100%;
+    }
 }
 .container{
+    width: 100%;
+
+    @media @large{
     width: 1170px;
     margin: 0px auto;
+    }
 }
 
 .clearfix:after{
