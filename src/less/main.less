@@ -83,8 +83,25 @@ header{
 }
 
 .product_photo{
-    float: left;
-    margin: 0px 33px 0px 59px;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+
+    @media only screen and (min-width: 400px){
+        width: 70%;
+        margin: 0px auto;
+    }
+
+    @media @tablet{
+        width: 50%;
+        margin: 0px auto;
+    }
+
+    @media @desktop {
+        float: left;
+        margin: 0px 33px 0px 59px;  
+        width: 40%;  
+    }
 }
 
 .breadcrumbs{
