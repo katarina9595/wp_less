@@ -15,10 +15,10 @@ body {
 }
 .container{
     width: 100%;
+    margin: 0px auto;
 
     @media @large{
     width: 1170px;
-    margin: 0px auto;
     }
 }
 
@@ -31,17 +31,11 @@ body {
 header{
     padding: 3% 3% 3% 3%;
     // padding: 20px 0px 0px 0px;
-    margin: 0px auto;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
     justify-content: flex-start;
     align-content: space-between;
     height: auto;
-    background-color: red;
-
-    @media @tablet{
-        justify-content: space-between;
-    }
 }
 
 .header_menu{
@@ -68,7 +62,7 @@ header{
     // margin-left: 41px;
     display: inline-flex;
     justify-content: flex-start;
-    margin-left: auto;
+    margin-left: 2%;
     // width: 60%;
     // width: 96px;
     // height: 29px;
@@ -79,7 +73,7 @@ header{
     // margin: 0px 258px 0px 359px;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 10%;
 
     @media only screen and (min-width: 500px){
         display: inline-flex;
@@ -93,7 +87,7 @@ header{
         width: auto;
         float: none;
         justify-content: center;
-        margin-left: auto;
+        margin: 0% 14%;
     }
 }
 
@@ -106,7 +100,6 @@ header{
     @media @tablet{
         display: inline-flex;
         margin: 0;
-        
     }
     // width: 131px;
     // height: 29px;
@@ -121,7 +114,7 @@ header{
 
     @media @tablet{
         display: inline-flex;
-        margin: 0;
+        margin: 0% 0% 0% 2%;
         // justify-content: flex-end;
     }
     // width: 96px;
@@ -129,7 +122,14 @@ header{
 }
 
 .product{
-    padding: 80px 0px 40px 0px;
+    padding: 10% 3%;
+    display: flex;
+    flex-flow: row wrap;               //блоки переносятся
+    justify-content: center;
+    align-content: space-between;
+    height: auto;
+
+    // padding: 80px 0px 40px 0px;
 
     @media @desktop{
     background: url('@{path}/STYLE.png') no-repeat right bottom;
@@ -140,7 +140,7 @@ header{
 .product_photo{
     width: 100%;
     height: auto;
-    margin: 0px auto;
+    display: flex;
 
     @media only screen and (min-width: 400px){
         width: 70%;
