@@ -38,6 +38,10 @@ header{
     align-content: space-between;
     height: auto;
     background-color: red;
+
+    @media @tablet{
+        justify-content: space-between;
+    }
 }
 
 .header_menu{
@@ -84,6 +88,13 @@ header{
         justify-content: flex-end;
         float: right;
     }
+
+    @media @tablet {
+        width: auto;
+        float: none;
+        justify-content: center;
+        margin-left: auto;
+    }
 }
 
 .header_account{
@@ -91,6 +102,12 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    
+    @media @tablet{
+        display: inline-flex;
+        margin: 0;
+        
+    }
     // width: 131px;
     // height: 29px;
     // margin-right: 39px;
@@ -101,6 +118,12 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 2%;
+
+    @media @tablet{
+        display: inline-flex;
+        margin: 0;
+        // justify-content: flex-end;
+    }
     // width: 96px;
     // height: 29px;
 }
