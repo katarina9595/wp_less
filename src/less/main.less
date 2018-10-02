@@ -29,13 +29,24 @@ body {
 }
 
 header{
-    padding: 20px 0px 0px 0px;
+    padding: 3% 3% 3% 3%;
+    // padding: 20px 0px 0px 0px;
+    margin: 0px auto;
+    display: flex;
+    flex-flow: row wrap;               //блоки переносятся
+    justify-content: flex-start;
+    align-content: space-between;
+    height: auto;
+    background-color: red;
 }
 
 .header_menu{
-    float: left;
-    width: 29px;
-    height: 29px;
+    // float: left;
+    display: inline-flex;
+    justify-content: center;
+    // width: 30%;
+    // width: 29px;
+    // height: 29px;
 }
 
 .header_icon{
@@ -49,28 +60,49 @@ header{
 }   
 
 .header_search{
-    float: left;
-    margin-left: 41px;
-    width: 96px;
-    height: 29px;
+    // float: left;
+    // margin-left: 41px;
+    display: inline-flex;
+    justify-content: flex-start;
+    margin-left: auto;
+    // width: 60%;
+    // width: 96px;
+    // height: 29px;
 }
 
 .header_logo{
-    float: left;
-    margin: 0px 258px 0px 359px;
+    // float: left;
+    // margin: 0px 258px 0px 359px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+
+    @media only screen and (min-width: 500px){
+        display: inline-flex;
+        margin: 0;
+        width: 50%;
+        justify-content: flex-end;
+        float: right;
+    }
 }
 
 .header_account{
-    float: left;
-    width: 131px;
-    height: 29px;
-    margin-right: 39px;
+    // float: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    // width: 131px;
+    // height: 29px;
+    // margin-right: 39px;
 }
 
 .header_bag{
-    float: right;
-    width: 96px;
-    height: 29px;
+    // float: right;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    // width: 96px;
+    // height: 29px;
 }
 
 .product{
