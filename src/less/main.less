@@ -16,6 +16,10 @@ body {
 .container{
     width: 100%;
     margin: 0px auto;
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: flex-start;
+    align-items: flex-start;
 
     @media @large{
     width: 1170px;
@@ -33,15 +37,12 @@ header{
     // padding: 20px 0px 0px 0px;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
-    justify-content: flex-start;
-    align-content: space-between;
+    justify-content: center;
     height: auto;
 }
 
 .header_menu{
     // float: left;
-    display: inline-flex;
-    justify-content: center;
     // width: 30%;
     // width: 29px;
     // height: 29px;
@@ -60,8 +61,7 @@ header{
 .header_search{
     // float: left;
     // margin-left: 41px;
-    display: inline-flex;
-    justify-content: flex-start;
+    display: flex;
     margin-left: 2%;
     // width: 60%;
     // width: 96px;
@@ -71,34 +71,36 @@ header{
 .header_logo{
     // float: left;
     // margin: 0px 258px 0px 359px;
-    display: flex;
+    display: inline-flex;
+    width: 100%;
     justify-content: center;
     margin-top: 10%;
 
     @media only screen and (min-width: 500px){
         display: inline-flex;
-        margin: 0;
+        margin: 0% 0% 0% auto;
         width: 50%;
         justify-content: flex-end;
-        float: right;
     }
 
     @media @tablet {
         width: auto;
-        float: none;
         justify-content: center;
-        margin: 0% 14%;
+        margin: 0 auto;
+        // margin: 0% 14%;
     }
 }
 
 .header_account{
     // float: left;
-    display: flex;
+    display: inline-flex;
+    width: 100%;
     justify-content: center;
     margin-top: 5%;
     
     @media @tablet{
         display: inline-flex;
+        width: auto;
         margin: 0;
     }
     // width: 131px;
@@ -108,12 +110,14 @@ header{
 
 .header_bag{
     // float: right;
-    display: flex;
+    display: inline-flex;
+    width: 100%;
     justify-content: center;
     margin-top: 2%;
 
     @media @tablet{
         display: inline-flex;
+        width: auto;
         margin: 0% 0% 0% 2%;
         // justify-content: flex-end;
     }
@@ -126,7 +130,6 @@ header{
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
     justify-content: center;
-    align-content: space-between;
     height: auto;
 
     // padding: 80px 0px 40px 0px;
@@ -140,6 +143,7 @@ header{
 .product_photo{
     width: 100%;
     height: auto;
+    align-items: flex-start;
     display: flex;
 
     @media only screen and (min-width: 400px){
