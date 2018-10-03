@@ -126,7 +126,7 @@ header{
 }
 
 .product{
-    padding: 10% 3%;
+    padding: 4% 3%;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
     justify-content: center;
@@ -140,10 +140,19 @@ header{
     }
 }
 
+.product_arrow-back{
+    display: block;
+    width: auto;
+    margin: 2% auto 5% auto;
+
+    @media only screen and (min-width: 530px){
+        display: none;
+    }
+}
+
 .product_photo{
     width: 100%;
     height: auto;
-    align-items: flex-start;
     display: flex;
 
     @media only screen and (min-width: 400px){
@@ -158,14 +167,24 @@ header{
 
     @media @desktop {
         float: left;
-        margin: 0px 33px 0px 59px;  
+        margin: 0% 1.7% 0% 3%;  
         width: 40%;  
     }
 }
 
 .breadcrumbs{
-    float: left;
-    margin: 10px 0px 65px 0px;
+    display: none;
+
+    @media only screen and (min-width: 530px){
+        display: block;
+        width: auto;
+        margin: 7% auto;
+    }
+
+    @media @desktop{
+        float: left;
+        margin: 10px 0px 65px 0px;
+    }
 }
 
 .breadcrumbs_menu{
@@ -187,7 +206,7 @@ header{
 hr{
     border: 0;
     background-color: @text-color;
-    width: 28px;
+    width: 1.75rem;
     height: 0.5px;
     float: left;
 }
