@@ -171,7 +171,8 @@ header{
     }
 
     @media @desktop {
-        float: left;
+        display: flex;
+        // float: left;
         margin: 0% 1.7% 0% 3%;    
     }
 }
@@ -186,9 +187,13 @@ header{
         margin: 7% auto;
     }
 
+    @media @tablet{
+        margin: 3% auto 5% auto;
+    }
+
     @media @desktop{
         width: auto;
-        float: left;
+        // float: left;
         margin: 0.7% 0% 3.3% 0%;
     }
 }
@@ -196,12 +201,12 @@ header{
 .breadcrumbs_menu{
     padding: 0;
     margin: 0;
-    display: block;
+    display: flex;
 
     & li{
         float: left;
         margin-right: 10px;
-        display: block;
+        display: flex;
     }
     &_item{
         .text();
@@ -213,16 +218,45 @@ hr{
     border: 0;
     background-color: @text-color;
     width: 1.75rem;
-    height: 0.5px;
+    height: 0.031rem;
     float: left;
 }
 
 h1{
-    .text(@m: 0px 0px 28px 0px,@fon-s: 54px, @c: @main-color, @fw: bold);
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    .text(@m: 7% 0% 5% 0%, @fon-s: 28px, @c: @main-color, @fw: bold, @fl:none);
+
+    @media only screen and (min-width: 530px){
+        .text(@m: 0% 0% 5% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
+    }
+
+    @media @tablet{
+        justify-content: flex-start;
+        .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
+    }
+
+    @media @desktop{
+        width: auto;
+        .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
+    }
+
+    @media @large{
+        .text(@m: 0% 0% 3% 0%, @fon-s: 54px, @c: @main-color, @fw: bold, @fl:none);
+    }
 }
 
 p{
-    .text(@m: 0px 0px 42px 0px, @fon-s: @f-s-l, @lih: 1.5em);
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    .text(@m: 0% 0% 11% 0%, @fon-s: 14px, @lih: 1.5em);
+
+    @media @desktop{
+        width: 30%;
+        .text(@m: 0% 0% 2% 0%, @fon-s: @f-s-l, @lih: 1.5em);
+    }
 }
 
 .colours{
