@@ -160,15 +160,19 @@ header{
         margin: 0px auto;
     }
 
-    @media @tablet{
+    @media only screen and (min-width: 650px){
         width: 50%;
+        margin: 0px auto;
+    }
+
+    @media only screen and (min-width: 840px){
+        width: 40%;
         margin: 0px auto;
     }
 
     @media @desktop {
         float: left;
-        margin: 0% 1.7% 0% 3%;  
-        width: 40%;  
+        margin: 0% 1.7% 0% 3%;    
     }
 }
 
@@ -176,14 +180,16 @@ header{
     display: none;
 
     @media only screen and (min-width: 530px){
-        display: block;
-        width: auto;
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
         margin: 7% auto;
     }
 
     @media @desktop{
+        width: auto;
         float: left;
-        margin: 10px 0px 65px 0px;
+        margin: 0.7% 0% 3.3% 0%;
     }
 }
 
