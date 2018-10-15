@@ -153,7 +153,6 @@ header{
 .product_photo{
     width: 100%;
     height: auto;
-    display: flex;
 
     @media only screen and (min-width: 400px){
         width: 70%;
@@ -171,7 +170,7 @@ header{
     }
 
     @media @desktop {
-        display: flex;
+        display: inline-flex;
         // float: left;
         margin: 0% 1.7% 0% 3%;    
     }
@@ -181,9 +180,7 @@ header{
     display: none;
 
     @media only screen and (min-width: 530px){
-        display: inline-flex;
-        width: 100%;
-        justify-content: center;
+        display: flex;
         margin: 7% auto;
     }
 
@@ -201,12 +198,11 @@ header{
 .breadcrumbs_menu{
     padding: 0;
     margin: 0;
-    display: flex;
 
     & li{
         float: left;
         margin-right: 10px;
-        display: flex;
+        display: block;
     }
     &_item{
         .text();
@@ -223,17 +219,13 @@ hr{
 }
 
 h1{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-    .text(@m: 7% 0% 5% 0%, @fon-s: 28px, @c: @main-color, @fw: bold, @fl:none);
+    .text(@m: 7% auto 5% auto, @fon-s: 28px, @c: @main-color, @fw: bold, @fl:none);
 
     @media only screen and (min-width: 530px){
-        .text(@m: 0% 0% 5% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
+        .text(@m: 0% auto 5% auto, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
     }
 
     @media @tablet{
-        justify-content: flex-start;
         .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
     }
 
@@ -248,10 +240,7 @@ h1{
 }
 
 p{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-    .text(@m: 0% 0% 11% 0%, @fon-s: 14px, @lih: 1.5em);
+    .text(@m: 0% auto 11% auto, @fon-s: 14px, @lih: 1.5em);
 
     @media @desktop{
         width: 30%;
