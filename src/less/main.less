@@ -15,7 +15,7 @@ body {
 }
 .container{
     width: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap; 
     justify-content: flex-start;
@@ -33,7 +33,7 @@ body {
 }
 
 header{
-    padding: 3% 3% 3% 3%;
+    padding: 1.7% 3% 0% 3%;
     // padding: 20px 0px 0px 0px;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
@@ -126,13 +126,14 @@ header{
 }
 
 .product{
-    padding: 4% 3%;
+    box-sizing: border-box;
+    padding: 5% 3%;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
     justify-content: center;
     height: auto;
 
-    @media @desktop{
+    @media @desktop{  
     background: url('@{path}/STYLE.png') no-repeat right bottom;
     background-size: 35% auto;
     }
@@ -162,14 +163,25 @@ header{
     }
 
     @media only screen and (min-width: 840px){
-        width: 40%;
+        width: 37%;
         margin: 0px auto;
     }
 
     @media @desktop {
-        display: inline-flex;
         // float: left;
-        margin: 0% 1.7% 0% 3%;    
+        margin: 0% 2.8% 0% 5%;    
+    }
+}
+
+.product_description{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;               //блоки переносятся
+    height: auto;
+    padding: 0;
+
+    @media @desktop{
+        width: auto;
     }
 }
 
@@ -187,7 +199,6 @@ header{
     }
 
     @media @desktop{
-        display: inline-flex;
         // float: left;
         margin: 0.7% 0% 3.3% 0%;
     }
@@ -225,11 +236,7 @@ h1{
     }
 
     @media @tablet{
-        .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
-    }
-
-    @media @desktop{
-        display: inline-flex;
+        width: 100%;
         .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
     }
 
@@ -241,34 +248,72 @@ h1{
 p{
     .text(@m: 0% auto 11% auto, @fon-s: 14px, @lih: 1.5em);
 
+    @media only screen and (min-width: 700px){
+        .text(@m: 0% auto 7% auto, @fon-s: 14px, @lih: 1.5em);
+    }
+
     @media @desktop{
-        width: 30%;
+        width: 83%;
         .text(@m: 0% 0% 2% 0%, @fon-s: @f-s-l, @lih: 1.5em);
     }
 }
 
 .colours{
-    float: left;
-    width: 50%;
-    margin: 0px 0px 30px 0px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 11%;
     
+    @media only screen and (min-width: 400px){
+        justify-content: flex-start;
+        margin-bottom: 7%;
+    }   
+
+    @media only screen and (min-width: 530px){
+        margin-bottom: 5%;
+    }
+
+    @media only screen and (min-width: 650px){
+        width: 50%;
+    }
+
     h3{
-        .text(@m: 0px 29px 0px 0px, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        display: none; 
+
+        @media only screen and (min-width: 400px){
+            display: flex;
+            width: auto;
+            .text(@m: 0% 8% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        }
     }
 }
 
 .colours-range{
     padding: 0;
     margin: 0;
-    display: block;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+
+    @media only screen and (min-width: 400px){
+        justify-content: flex-start;
+    }
 
     & li{
         float: left;
         display: block;
-        margin-right: 31px;
+        margin-right: 10%;
+
+        @media only screen and (min-width: 530px){
+            margin-right: 7%;  
+        }
         
+        @media only screen and (min-width: 650px){
+            margin-right: 12%;
+        }
+
         &:last-child{
-            margin-right: 0px;
+            margin-right: 0%;
         }
     }
 }
@@ -282,12 +327,36 @@ p{
 }
 
 .sizes{
-    float: left;
-    width: 282px;
-    margin: 0px 0px 60px 0px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 11%;
+    
+    @media only screen and (min-width: 400px){
+        justify-content: flex-start;
+        margin-bottom: 7%;
+    }   
+
+    @media only screen and (min-width: 530px){
+        margin-bottom: 5%;
+    }
+
+    @media only screen and (min-width: 650px){
+        width: 50%;
+    }
 
     h3{
-        .text(@m: 0px 50px 0px 0px, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        display: none; 
+
+        @media only screen and (min-width: 400px){
+            display: flex;
+            width: auto;
+            .text(@m: 0% 13% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        }
+
+        @media only screen and (min-width: 530px){
+            .text(@m: 0% 11% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        }
     }
 }
 
@@ -364,7 +433,12 @@ p{
 }
 
 footer{
-    padding: 40px 0px 10px 0px;
+    box-sizing: border-box;
+    padding: 5% 3%;
+    display: flex;
+    flex-flow: row wrap;               //блоки переносятся
+    justify-content: center;
+    height: auto;
     background-color: rgba(244, 238, 235, 0.61);
 }
 
@@ -378,8 +452,9 @@ footer{
 }
 
 input{
-    width: 375px;
-    height: 40px;
+    width: 100%;
+    // width: 32%;
+    height: 3.4%;
     background-color: rgba(255, 255, 255, 0.70);
     border: 0.15px solid;
     border-color: rgba(138, 121, 110, 0.5);
@@ -396,7 +471,6 @@ input[type="email"]::-moz-placeholder {
 }
 
 .card-form-act{
-    float: left;
 
     &_text{
         .text(@m: 15px 0px 0px 0px, @c:rgba(0, 0, 0, 0.38));
@@ -406,5 +480,4 @@ input[type="email"]::-moz-placeholder {
 
 .credits{
     .text(@m: 60px 0px 0px 0px, @fon-s: 12px, @c: @text-color);
-    float: right;
 }
