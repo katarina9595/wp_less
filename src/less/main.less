@@ -621,10 +621,21 @@ footer{
 
 .card-form{
     display: flex;
-    width: 90%;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+
+    @media only screen and (min-width: 840px){
+        width: 75%;
+        justify-content: flex-end;
+    }
+}
+
+input{
+    width: 80%;
     height: auto;
     margin: 5% auto;
-
+    
     @media only screen and (min-width: 530px){
         width: 70%;
         margin: 5% auto 3% auto;
@@ -642,45 +653,55 @@ footer{
     }
 
     @media only screen and (min-width: 840px){
-        width: 50%;
-        justify-content: flex-end;
+        width: 60%;
+        margin: 3% 0% 0% 0%;
     }
 
     @media @desktop{
         width: auto;
         justify-content: flex-start;
     }
-}
 
-input{
-    width: 100%;
-    // width: 32%;
-    height: auto;
     background-color: rgba(255, 255, 255, 0.70);
     border: 0.15px solid;
     border-color: rgba(138, 121, 110, 0.5);
     padding: 3%;
 
-    @media only screen and (min-width: 840px){
-        width: 70%;
+    @media only screen and (min-width: 650px){
+        padding: 2%;
     }
+
 }
 
 input[type="email"]::-webkit-input-placeholder {
     color:rgba(0, 0, 0, 0.30);
     font-family:  @fonf;
     font-size: @f-s-sm;
+
+    @media only screen and (min-width: 650px){
+        font-size: @f-s-l;
+    }
 } 
 input[type="email"]::-moz-placeholder {
     color:rgba(0, 0, 0, 0.30);
     font-family:  @fonf;
     font-size: @f-s-sm;
+
+    @media only screen and (min-width: 650px){
+        font-size: @f-s-l;
+    }
 }
 
 .card-form-act{
     display: inline-flex;
     width: 100%;
     justify-content: flex-end;
+
+    @media only screen and (min-width: 840px){
+        width: 15%;
+        justify-content: flex-start;
+    }
+
     &_text{
         .text(@m: 0% 5% 20% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
 
@@ -693,8 +714,7 @@ input[type="email"]::-moz-placeholder {
         }
 
         @media only screen and (min-width: 840px){
-            width: auto;
-            .text(@m: 0% 15% 8% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
+            .text(@m: 30% 10% 50% 20%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
         }
 
         .line(@c: @text-color);
