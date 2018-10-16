@@ -513,7 +513,7 @@ p{
 
 footer{
     box-sizing: border-box;
-    padding: 5% 3%;
+    padding: 5% 3% 1% 3%;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
     justify-content: center;
@@ -522,22 +522,30 @@ footer{
 }
 
 .card-offer{
-    .text(@m: 7px 0px 0px 0px, @fon-s: @f-s-l, @c: @main-color, @lih: 1.5em);
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    .text(@fon-s: @f-s-sm, @c: @main-color, @lih: 1.5em);
+
+
+    // .text(@m: 7px 0px 0px 0px, @fon-s: @f-s-l, @c: @main-color, @lih: 1.5em);
 }
 
 .card-form{
-    float: left;
-    margin: 0px 22px 0px 32px;
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
 }
 
 input{
     width: 100%;
     // width: 32%;
-    height: 3.4%;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.70);
     border: 0.15px solid;
     border-color: rgba(138, 121, 110, 0.5);
-    padding-left: 10px;
+    padding: 3%;
 }
 
 input[type="email"]::-webkit-input-placeholder {
@@ -550,13 +558,18 @@ input[type="email"]::-moz-placeholder {
 }
 
 .card-form-act{
-
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
     &_text{
-        .text(@m: 15px 0px 0px 0px, @c:rgba(0, 0, 0, 0.38));
+        .text(@m: 3% 5% 20% 0%, @c:rgba(0, 0, 0, 0.38));
         .line(@c: @text-color);
     }
 }
 
 .credits{
-    .text(@m: 60px 0px 0px 0px, @fon-s: 12px, @c: @text-color);
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+    .text(@fon-s: 12px, @c: @text-color);
 }
