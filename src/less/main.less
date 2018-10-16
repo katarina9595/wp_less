@@ -139,7 +139,6 @@ header{
 }
 
 .product_arrow-back{
-    display: block;
     width: auto;
     margin: 2% auto 5% auto;
 
@@ -179,6 +178,7 @@ header{
 
     @media only screen and (min-width: 530px){
         display: flex;
+        width: auto;
         margin: 7% auto;
     }
 
@@ -188,7 +188,6 @@ header{
 
     @media @desktop{
         display: inline-flex;
-        width: auto;
         // float: left;
         margin: 0.7% 0% 3.3% 0%;
     }
@@ -218,6 +217,7 @@ hr{
 }
 
 h1{
+    width: auto;
     .text(@m: 7% auto 5% auto, @fon-s: 28px, @c: @main-color, @fw: bold, @fl:none);
 
     @media only screen and (min-width: 530px){
@@ -230,7 +230,6 @@ h1{
 
     @media @desktop{
         display: inline-flex;
-        width: auto;
         .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
     }
 
