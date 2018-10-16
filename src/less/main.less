@@ -253,7 +253,7 @@ p{
     }
 
     @media @desktop{
-        width: 83%;
+        width: 50%;
         .text(@m: 0% 0% 2% 0%, @fon-s: @f-s-l, @lih: 1.5em);
     }
 }
@@ -277,12 +277,24 @@ p{
         width: 50%;
     }
 
+    @media @desktop{
+        width: 100%;
+    }
+
     h3{
         display: none; 
 
         @media only screen and (min-width: 400px){
             display: flex;
             width: auto;
+            .text(@m: 0% 8% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        }
+
+        @media @tablet{
+            .text(@m: 0% 11% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        }
+
+        @media @desktop{
             .text(@m: 0% 8% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
         }
     }
@@ -310,6 +322,10 @@ p{
         
         @media only screen and (min-width: 650px){
             margin-right: 12%;
+        }
+
+        @media @desktop{
+            margin-right: 5%;
         }
 
         &:last-child{
@@ -345,6 +361,10 @@ p{
         width: 50%;
     }
 
+    @media @desktop{
+        width: 100%;
+    }
+
     h3{
         display: none; 
 
@@ -357,19 +377,41 @@ p{
         @media only screen and (min-width: 530px){
             .text(@m: 0% 11% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
         }
+
+        @media @desktop{
+            .text(@m: 0% 10% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+        }
     }
 }
 
 .sizes-range{
     padding: 0;
     margin: 0;
-    display: block;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+
+    @media only screen and (min-width: 400px){
+        justify-content: flex-start;
+    }
 
     & li{
         float: left;
         display: block;
-        margin-right: 40px;
+        margin-right: 12%;
+
+        @media only screen and (min-width: 530px){
+            margin-right: 10%;  
+        }
         
+        @media only screen and (min-width: 650px){
+            margin-right: 12%;
+        }
+        
+        @media @desktop{
+            margin-right: 6%;
+        }
+
         &:last-child{
             margin-right: 0px;
         }
@@ -382,24 +424,41 @@ p{
 }
 
 .price{
-    .text(@m: 0px 0px 60px 0px, @fon-s: 36px, @c: #6D5F56);
-    width: 50%;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    .text(@m: 0% 0% 11% 0%, @fon-s: 32px, @c: #6D5F56);
+    
+    @media only screen and (min-width: 650px){
+        justify-content: flex-start;
+    }
+
+    @media @tablet{
+    .text(@m: 0% 0% 11% 0%, @fon-s: 36px, @c: #6D5F56);
+    }
 }
 
 .button{
-    display: block;
+    display: flex;
+    margin: 0 auto;
     padding: 10px 0px;
-    float: left;
     border: 1.5px solid @main-color;
-    width: 303px;
-    text-align: center;
-    margin: 0px 0px 0px 120px;
+    width: 43%;
+    justify-content: center;
+
+
+    @media @desktop{
+        margin: 0;
+        width: 25%;
+    }
+
+    // margin: 0px 0px 0px 120px;
 
     &_text{
         padding: 0;
         margin: 0;
         font-family: @fonf;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: normal;
         line-height: 1.5em;
         letter-spacing: @l-s;
