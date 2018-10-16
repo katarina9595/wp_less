@@ -354,11 +354,11 @@ p{
     
     @media only screen and (min-width: 400px){
         justify-content: flex-start;
-        margin-bottom: 7%;
+        margin-bottom: 10%;
     }   
 
     @media only screen and (min-width: 530px){
-        margin-bottom: 5%;
+        margin-bottom: 10%;
     }
 
     @media only screen and (min-width: 650px){
@@ -432,6 +432,10 @@ p{
     width: 100%;
     justify-content: center;
     .text(@m: 0% 0% 11% 0%, @fon-s: 32px, @c: #6D5F56);
+
+    @media only screen and (min-width: 400px){
+        .text(@m: 0% 0% 8% 0%, @fon-s: 32px, @c: #6D5F56);
+    } 
     
     @media only screen and (min-width: 650px){
         justify-content: flex-start;
@@ -481,6 +485,10 @@ p{
     flex-flow: row wrap;               //блоки переносятся
     justify-content: center;
     height: auto;
+
+    @media only screen and (min-width: 530px){
+        padding: 5% 3%;
+    }
 }
 
 .rating-block{
@@ -507,18 +515,24 @@ p{
     justify-content: center;
     &_text{
         .text(@m: 3% 0% 0% 0%);
+
+        @media only screen and (min-width: 530px){
+            .text(@m: 2% 0% 0% 0%);
+        }
+
         .line(@c: @text-color);
     }
 }
 
 footer{
     box-sizing: border-box;
-    padding: 5% 3% 1% 3%;
+    padding: 6% 3% 1% 3%;
     display: flex;
     flex-flow: row wrap;               //блоки переносятся
     justify-content: center;
     height: auto;
     background-color: rgba(244, 238, 235, 0.61);
+
 }
 
 .card-offer{
@@ -526,6 +540,10 @@ footer{
     width: 100%;
     justify-content: center;
     .text(@fon-s: @f-s-sm, @c: @main-color, @lih: 1.5em);
+
+    @media only screen and (min-width: 530px){
+        justify-content: flex-start;
+    }
 
 
     // .text(@m: 7px 0px 0px 0px, @fon-s: @f-s-l, @c: @main-color, @lih: 1.5em);
@@ -536,6 +554,11 @@ footer{
     width: 90%;
     height: auto;
     margin: 5% auto;
+
+    @media only screen and (min-width: 530px){
+        width: 70%;
+        margin: 5% auto 3% auto;
+    }
 }
 
 input{
@@ -551,10 +574,12 @@ input{
 input[type="email"]::-webkit-input-placeholder {
     color:rgba(0, 0, 0, 0.30);
     font-family:  @fonf;
+    font-size: @f-s-sm;
 } 
 input[type="email"]::-moz-placeholder {
     color:rgba(0, 0, 0, 0.30);
     font-family:  @fonf;
+    font-size: @f-s-sm;
 }
 
 .card-form-act{
@@ -562,7 +587,11 @@ input[type="email"]::-moz-placeholder {
     width: 100%;
     justify-content: flex-end;
     &_text{
-        .text(@m: 3% 5% 20% 0%, @c:rgba(0, 0, 0, 0.38));
+        .text(@m: 0% 5% 20% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
+
+        @media only screen and (min-width: 530px){
+            .text(@m: 0% 5% 8% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
+        }
         .line(@c: @text-color);
     }
 }
