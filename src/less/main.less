@@ -615,7 +615,7 @@ footer{
 
     @media @desktop{
         width: auto;
-        justify-content: flex-start;
+        background-color: red;
     }
 }
 
@@ -629,12 +629,21 @@ footer{
         width: 75%;
         justify-content: flex-end;
     }
+
+    @media @desktop{
+        width: 40%;
+        margin-left: 3%;
+    }
 }
 
 input{
     width: 80%;
     height: auto;
     margin: 5% auto;
+    background-color: rgba(255, 255, 255, 0.70);
+    border: 0.15px solid;
+    border-color: rgba(138, 121, 110, 0.5);
+    padding: 3%;
     
     @media only screen and (min-width: 530px){
         width: 70%;
@@ -644,12 +653,12 @@ input{
     @media only screen and (min-width: 650px){
         width: 60%;
         margin: 3% auto 2% auto;
+        padding: 2%;
     }
 
     @media @tablet{
         width: 50%;
         margin: 3% auto 1% auto;
-
     }
 
     @media only screen and (min-width: 840px){
@@ -658,19 +667,10 @@ input{
     }
 
     @media @desktop{
-        width: auto;
-        justify-content: flex-start;
+        width: 100%;
+        padding: 3%;
+        margin: 0;
     }
-
-    background-color: rgba(255, 255, 255, 0.70);
-    border: 0.15px solid;
-    border-color: rgba(138, 121, 110, 0.5);
-    padding: 3%;
-
-    @media only screen and (min-width: 650px){
-        padding: 2%;
-    }
-
 }
 
 input[type="email"]::-webkit-input-placeholder {
@@ -714,7 +714,11 @@ input[type="email"]::-moz-placeholder {
         }
 
         @media only screen and (min-width: 840px){
-            .text(@m: 30% 10% 50% 20%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
+            .text(@m: 30% 0% 50% 20%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
+        }
+
+        @media @desktop{
+            .text(@m: 10% 0% 50% 20%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
         }
 
         .line(@c: @text-color);
