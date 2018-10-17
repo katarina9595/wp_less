@@ -375,6 +375,10 @@ p{
         width: 100%;
     }
 
+    @media @large{
+        margin-bottom: 8%;
+    }
+
     h3{
         display: none; 
 
@@ -423,8 +427,13 @@ p{
         }
         
         @media @desktop{
-            margin-right: 10%;
+            margin-right: 9%;
         }
+
+        @media @large{
+            margin-right: 8%;
+        }
+
 
         &:last-child{
             margin-right: 0px;
@@ -527,7 +536,6 @@ p{
     @media @desktop{
         padding: 3% 3%;
     }
-
 }
 
 .rating-block{
@@ -597,6 +605,10 @@ footer{
     @media only screen and (min-width: 840px){
         padding: 4% 3% 0.7% 3%;
     }
+
+    @media @desktop{
+        padding: 3% 3% 0.7% 3%;
+    }
 }
 
 .card-offer{
@@ -615,7 +627,7 @@ footer{
 
     @media @desktop{
         width: auto;
-        background-color: red;
+        margin-top: 0.8%;
     }
 }
 
@@ -625,14 +637,18 @@ footer{
     height: auto;
     justify-content: center;
 
-    @media only screen and (min-width: 840px){
+    @media @tablet{
         width: 75%;
         justify-content: flex-end;
     }
 
     @media @desktop{
         width: 40%;
-        margin-left: 3%;
+        margin-left: 5%;
+    }
+
+    @media @large{
+        width: 35%;
     }
 }
 
@@ -652,18 +668,18 @@ input{
 
     @media only screen and (min-width: 650px){
         width: 60%;
-        margin: 3% auto 2% auto;
+        margin: 4% auto 2% auto;
         padding: 2%;
     }
 
     @media @tablet{
-        width: 50%;
-        margin: 3% auto 1% auto;
+        width: 65%;
+        margin: 4% 0% 0% 0%;
     }
 
     @media only screen and (min-width: 840px){
         width: 60%;
-        margin: 3% 0% 0% 0%;
+        margin: 4% 0% 0% 0%;
     }
 
     @media @desktop{
@@ -696,31 +712,24 @@ input[type="email"]::-moz-placeholder {
     display: inline-flex;
     width: 100%;
     justify-content: flex-end;
+    margin: 0% 5% 10% 0%;
 
-    @media only screen and (min-width: 840px){
-        width: 15%;
-        justify-content: flex-start;
+    @media @tablet{
+        width: auto;
+        margin: 5% 0% 10% 2%;
     }
 
+    @media @desktop{
+        margin: 2% 0% 5% 2%;
+    }
+
+    @media @large{
+        margin: 1.7% 0% 3% 2%;
+    }
+
+
     &_text{
-        .text(@m: 0% 5% 20% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
-
-        @media only screen and (min-width: 530px){
-            .text(@m: 0% 5% 8% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
-        }
-
-        @media @tablet{
-            .text(@m: 0% 10% 8% 0%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
-        }
-
-        @media only screen and (min-width: 840px){
-            .text(@m: 30% 0% 50% 20%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
-        }
-
-        @media @desktop{
-            .text(@m: 10% 0% 50% 20%, @c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm);
-        }
-
+        .text(@c:rgba(0, 0, 0, 0.38), @fon-s: @f-s-sm, @fl: none);
         .line(@c: @text-color);
     }
 }
