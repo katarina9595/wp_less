@@ -164,13 +164,17 @@ header{
 .breadcrumbs_menu{
     padding: 0;
     margin: 0;
+    display: flex;
+    width: 100%;
 
     & li{
-        float: left;
+        display: flex;
+        width: auto;
         margin-right: 10px;
-        display: block;
     }
     &_item{
+        display: flex;
+        width: auto;
         .text();
         .line(@c: @text-color);
     }
@@ -181,7 +185,7 @@ hr{
     background-color: @text-color;
     width: 1.75rem;
     height: 0.031rem;
-    float: left;
+    // float: left;
 }
 
 h1{
