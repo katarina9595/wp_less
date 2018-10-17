@@ -9,6 +9,11 @@
 @f-s-sm: 14px;
 @tal: left;
 
+.big-cont-flex(@j: flex-start){
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: @j;
+}
 
 .text (@m:0, @fon-s: @f-s-sm, @c: @text-color, @lih: @l-h, @fw: normal, @fl: left){
     float: @fl;

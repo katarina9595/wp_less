@@ -14,11 +14,9 @@ body {
     }
 }
 .container{
+    .big-cont-flex();
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: flex-start;
     align-items: flex-start;
 
     @media @large{
@@ -33,10 +31,8 @@ body {
 }
 
 header{
+    .big-cont-flex(@j: center);
     padding: 1.7% 3% 0% 3%;
-    display: flex;
-    flex-flow: row wrap;               
-    justify-content: center;
     height: auto;
 }
 
@@ -102,11 +98,9 @@ header{
 }
 
 .product{
+    .big-cont-flex(@j: center);
     box-sizing: border-box;
     padding: 5% 3%;
-    display: flex;
-    flex-flow: row wrap;               
-    justify-content: center;
     height: auto;
 
     @media @desktop{  
@@ -494,11 +488,9 @@ p{
 }
 
 .rating{
+    .big-cont-flex(@j: center);
     box-sizing: border-box;
     padding: 10% 3%;
-    display: flex;
-    flex-flow: row wrap;               
-    justify-content: center;
     height: auto;
 
     @media only screen and (min-width: 530px){
@@ -562,11 +554,9 @@ p{
 }
 
 footer{
+    .big-cont-flex(@j: center);
     box-sizing: border-box;
     padding: 6% 3% 1% 3%;
-    display: flex;
-    flex-flow: row wrap;               
-    justify-content: center;
     height: auto;
     background-color: rgba(244, 238, 235, 0.61);
 
