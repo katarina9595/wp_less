@@ -52,13 +52,10 @@ header{
 }
 
 .header_logo{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     margin-top: 10%;
 
     @media only screen and (min-width: 500px){
-        display: inline-flex;
         margin: 0% 0% 0% auto;
         width: 50%;
         justify-content: flex-end;
@@ -72,9 +69,7 @@ header{
 }
 
 .header_account{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     margin-top: 5%;
     
     @media @tablet{
@@ -85,9 +80,7 @@ header{
 }
 
 .header_bag{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     margin-top: 2%;
 
     @media @tablet{
@@ -158,8 +151,7 @@ header{
     display: none;
 
     @media only screen and (min-width: 530px){
-        display: flex;
-        width: auto;
+        .box-flex(@w: auto);
         margin: 7% auto;
     }
 
@@ -231,9 +223,7 @@ p{
 }
 
 .colours{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     margin-bottom: 10%;
     
     @media only screen and (min-width: 400px){
@@ -258,8 +248,7 @@ p{
         display: none; 
 
         @media only screen and (min-width: 400px){
-            display: flex;
-            width: auto;
+            .box-flex(@w: auto);
             .text(@m: 0% 8% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
         }
 
@@ -276,9 +265,7 @@ p{
 .colours-range{
     padding: 0;
     margin: 0;
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
 
     @media only screen and (min-width: 400px){
         justify-content: flex-start;
@@ -320,9 +307,7 @@ p{
 }
 
 .sizes{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     margin-bottom: 12%;
     
     @media only screen and (min-width: 400px){
@@ -351,8 +336,7 @@ p{
         display: none; 
 
         @media only screen and (min-width: 400px){
-            display: flex;
-            width: auto;
+            .box-flex(@w: auto);
             .text(@m: 0% 13% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
         }
 
@@ -369,9 +353,7 @@ p{
 .sizes-range{
     padding: 0;
     margin: 0;
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
 
     @media only screen and (min-width: 400px){
         justify-content: flex-start;
@@ -415,9 +397,7 @@ p{
 }
 
 .price{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     .text(@m: 0% 0% 11% 0%, @fon-s: 32px, @c: #6D5F56);
 
     @media only screen and (min-width: 400px){
@@ -438,13 +418,10 @@ p{
 }
 
 .button{
-    display: flex;
+    .box-flex(@w: 45%);
     margin: 0 auto;
     padding: 10px 0px;
     border: 1.5px solid @main-color;
-    width: 45%;
-    justify-content: center;
-
 
     @media only screen and (min-width: 530px){
         width: 40%;
@@ -511,9 +488,7 @@ p{
 }
 
 .rating-block_icon{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
 
     @media @tablet{
         width: 40%;
@@ -532,9 +507,7 @@ p{
 }
 
 .rating-block_reviews{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
 
     @media @tablet{
         width: 40%;
@@ -574,9 +547,7 @@ footer{
 }
 
 .card-offer{
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
+    .box-flex(@dis: inline-flex);
     .text(@fon-s: @f-s-sm, @c: @main-color, @lih: 1.5em);
 
     @media only screen and (min-width: 530px){
@@ -594,10 +565,8 @@ footer{
 }
 
 .card-form{
-    display: flex;
-    width: 100%;
+    .box-flex();
     height: auto;
-    justify-content: center;
 
     @media @tablet{
         width: 75%;
@@ -671,9 +640,7 @@ input[type="email"]::-moz-placeholder {
 }
 
 .card-form-act{
-    display: inline-flex;
-    width: 100%;
-    justify-content: flex-end;
+    .box-flex(@dis: inline-flex, @j: flex-end);
     margin: 0% 5% 10% 0%;
 
     @media @tablet{
@@ -697,8 +664,6 @@ input[type="email"]::-moz-placeholder {
 }
 
 .credits{
-    display: inline-flex;
-    width: 100%;
-    justify-content: flex-end;
+    .box-flex(@dis: inline-flex, @j: flex-end);
     .text(@fon-s: 12px, @c: @text-color);
 }
