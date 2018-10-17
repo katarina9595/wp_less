@@ -9,8 +9,8 @@ body {
     font-family: @fonf;
 
     @media @desktop {
-    background: url('@{path}/background.jpg') no-repeat left top;
-    background-size: 40% 100%;
+        background: url('@{path}/background.jpg') no-repeat left top;
+        background-size: 40% 100%;
     }
 }
 .container{
@@ -20,7 +20,7 @@ body {
     align-items: flex-start;
 
     @media @large{
-    width: 1170px;
+        width: 1170px;
     }
 }
 
@@ -42,7 +42,7 @@ header{
 }
 
 .header_menu-text{
-   .text(@m: 10px 0px 0px 0px, @c: @main-color);
+    .text(@m: 10px 0px 0px 0px, @c: @main-color);
     .line();
 }   
 
@@ -73,7 +73,6 @@ header{
     margin-top: 5%;
     
     @media @tablet{
-        display: inline-flex;
         width: auto;
         margin: 0;
     }
@@ -84,7 +83,6 @@ header{
     margin-top: 2%;
 
     @media @tablet{
-        display: inline-flex;
         width: auto;
         margin: 0% 0% 0% 2%;
     }
@@ -97,8 +95,8 @@ header{
     height: auto;
 
     @media @desktop{  
-    background: url('@{path}/STYLE.png') no-repeat right bottom;
-    background-size: 35% auto;
+        background: url('@{path}/STYLE.png') no-repeat right bottom;
+        background-size: 35% auto;
     }
 }
 
@@ -136,9 +134,8 @@ header{
 }
 
 .product_description{
-    display: flex;
-    width: 100%;
-    flex-flow: row wrap;              
+    .big-cont-flex();
+    width: 100%;         
     height: auto;
     padding: 0;
 
@@ -192,16 +189,19 @@ h1{
     .text(@m: 8% auto 5% auto, @fon-s: 28px, @c: @main-color, @fw: bold, @fl:none);
 
     @media only screen and (min-width: 530px){
-        .text(@m: 0% auto 5% auto, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
+        margin: 0% auto 5% auto;
+        font-size: 40px;
     }
 
     @media @tablet{
         width: 100%;
-        .text(@m: 0% 0% 3% 0%, @fon-s: 40px, @c: @main-color, @fw: bold, @fl:none);
+        margin: 0% 0% 3% 0%;
+        font-size: 40px;
     }
 
     @media @large{
-        .text(@m: 0% 0% 3% 0%, @fon-s: 54px, @c: @main-color, @fw: bold, @fl:none);
+        margin: 0% 0% 3% 0%;
+        font-size: 54px;
     }
 }
 
@@ -209,16 +209,17 @@ p{
     .text(@m: 0% auto 11% auto, @fon-s: @f-s-sm, @lih: 1.5em);
 
     @media only screen and (min-width: 650px){
-        .text(@m: 0% auto 7% auto, @fon-s: @f-s-sm, @lih: 1.5em);
+        margin: 0% auto 7% auto;
     }
 
     @media @desktop{
         width: 90%;
-        .text(@m: 0% 0% 9% 0%, @fon-s: @f-s-sm, @lih: 1.5em);
+        margin: 0% 0% 9% 0%;
     }
 
     @media @large{
-        .text(@m: 0% 0% 7% 0%, @fon-s: @f-s-l, @lih: 1.5em);
+        margin: 0% 0% 7% 0%;
+        @font-size: @f-s-l;
     }
 }
 
@@ -253,11 +254,11 @@ p{
         }
 
         @media @tablet{
-            .text(@m: 0% 11% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+            margin: 0% 11% 0% 0%;
         }
 
         @media @desktop{
-            .text(@m: 0% 8% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+            margin: 0% 8% 0% 0%;
         }
     }
 }
@@ -341,11 +342,11 @@ p{
         }
 
         @media only screen and (min-width: 530px){
-            .text(@m: 0% 11% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+            margin: 0% 11% 0% 0%;;
         }
 
         @media @desktop{
-            .text(@m: 0% 12% 0% 0%, @fon-s: 18px, @lih: 1.5em, @c: @main-color);
+            margin: 0% 12% 0% 0%;
         }
     }
 }
@@ -401,7 +402,7 @@ p{
     .text(@m: 0% 0% 11% 0%, @fon-s: 32px, @c: #6D5F56);
 
     @media only screen and (min-width: 400px){
-        .text(@m: 0% 0% 8% 0%, @fon-s: 32px, @c: #6D5F56);
+        margin: 0% 0% 8% 0%;
     } 
     
     @media only screen and (min-width: 650px){
@@ -409,11 +410,12 @@ p{
     }
 
     @media @tablet{
-        .text(@m: 0% 0% 7% 0%, @fon-s: 36px, @c: #6D5F56);
+        margin: 0% 0% 7% 0%;
+        font-size: 36px;
     }
 
     @media @desktop{
-        .text(@m: 0% 0% 12% 0%, @fon-s: 36px, @c: #6D5F56);
+        margin: 0% 0% 12% 0%;
     }
 }
 
@@ -480,10 +482,8 @@ p{
 }
 
 .rating-block{
-    display: flex;
+    .big-cont-flex(@j: center);
     width: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
     align-items: center;
 }
 
@@ -555,7 +555,7 @@ footer{
     }
 
     @media only screen and (min-width: 650px){
-        .text(@fon-s: @f-s-l, @c: @main-color, @lih: 1.5em);
+        font-size: @f-s-l;
     }
 
     @media @desktop{
