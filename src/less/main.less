@@ -42,7 +42,7 @@ header{
 }
 
 .header_menu-text{
-    .text(@m: 10px 0px 0px 0px, @c: @main-color);
+    .text(@m: 0.625rem 0 0 0, @c: @main-color);
     .line();
 }   
 
@@ -165,7 +165,7 @@ header{
 
     & li{
         float: left;
-        margin-right: 10px;
+        margin-right: 0.625rem;
         display: block;
     }
     &_item{
@@ -297,11 +297,9 @@ p{
 }
 
 .colours-range_icon{
-    width: 22px;
-    height: 22px;
     display: block;
     float: left;
-    .line(@h: 2px);
+    .line(@h: 0.125rem);
 }
 
 .sizes{
@@ -390,7 +388,7 @@ p{
 }
 
 .sizes-range_icon{
-    .text(@m: 5px 0px 0px 0px, @fon-s: 1.125rem, @fw: bold);
+    .text(@m: 0.3125rem 0 0 0, @fon-s: 1.125rem, @fw: bold);
     .line(@h: 2px);
 }
 
@@ -420,7 +418,7 @@ p{
     .box-flex(@w: 45%);
     margin: 0 auto;
     padding: 10px 0px;
-    border: 1.5px solid @main-color;
+    border: 0.09375rem solid @main-color;
 
     @media only screen and (min-width: 530px){
         width: 40%;
