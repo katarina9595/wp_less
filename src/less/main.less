@@ -17,6 +17,9 @@ body {
     .big-cont-flex();
     width: 100%;
     margin: 0 auto;
+        -webkit-box-align: flex-start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: flex-start;
     align-items: flex-start;
 
     @media @large{
@@ -52,7 +55,7 @@ header{
 }
 
 .header_logo{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     margin-top: 10%;
 
     @media only screen and (min-width: 500px){
@@ -69,7 +72,7 @@ header{
 }
 
 .header_account{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     margin-top: 5%;
     
     @media @tablet{
@@ -79,7 +82,7 @@ header{
 }
 
 .header_bag{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     margin-top: 2%;
 
     @media @tablet{
@@ -221,7 +224,7 @@ p{
 }
 
 .colours{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     margin-bottom: 10%;
     
     @media only screen and (min-width: 400px){
@@ -263,7 +266,7 @@ p{
 .colours-range{
     padding: 0;
     margin: 0;
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
 
     @media only screen and (min-width: 400px){
         justify-content: flex-start;
@@ -303,7 +306,7 @@ p{
 }
 
 .sizes{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     margin-bottom: 12%;
     
     @media only screen and (min-width: 400px){
@@ -349,7 +352,7 @@ p{
 .sizes-range{
     padding: 0;
     margin: 0;
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
 
     @media only screen and (min-width: 400px){
         justify-content: flex-start;
@@ -393,7 +396,7 @@ p{
 }
 
 .price{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     .text(@m: 0% 0% 11% 0%, @fon-s: 2rem, @c: #6D5F56);
 
     @media only screen and (min-width: 400px){
@@ -479,11 +482,14 @@ p{
 .rating-block{
     .big-cont-flex(@j: center);
     width: 100%;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
     align-items: center;
 }
 
 .rating-block_icon{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
 
     @media @tablet{
         width: 40%;
@@ -502,7 +508,7 @@ p{
 }
 
 .rating-block_reviews{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
 
     @media @tablet{
         width: 40%;
@@ -541,7 +547,7 @@ footer{
 }
 
 .card-offer{
-    .box-flex(@dis: inline-flex);
+    .box-inl-flex();
     .text(@fon-s: @f-s-sm, @c: @main-color, @lih: 1.5em);
 
     @media only screen and (min-width: 530px){
@@ -569,7 +575,7 @@ footer{
 
     @media @desktop{
         width: 40%;
-        margin-left: 5%;
+        margin-left: 3%;
     }
 
     @media @large{
@@ -634,7 +640,7 @@ input[type="email"]::-moz-placeholder {
 }
 
 .card-form-act{
-    .box-flex(@dis: inline-flex, @j: flex-end);
+    .box-inl-flex(@j: flex-end);
     margin: 0% 5% 10% 0%;
 
     @media @tablet{
@@ -658,6 +664,6 @@ input[type="email"]::-moz-placeholder {
 }
 
 .credits{
-    .box-flex(@dis: inline-flex, @j: flex-end);
+    .box-inl-flex(@j: flex-end);
     .text(@fon-s: 0.75rem, @c: @text-color);
 }

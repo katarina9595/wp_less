@@ -1,4 +1,3 @@
-
 @path: '../img';
 @fonf: 'Roboto', sans-serif;
 @text-color: #8A796E;
@@ -9,17 +8,44 @@
 @f-s-sm: 0.875rem;
 @tal: left;
 
-.box-flex(@dis: flex, @w: 100%, @j: center){
-    display: @dis;
-    width: @w;
+.big-cont-flex(@j: 'flex-start'){
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+    display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+    flex-flow: row wrap; 
+        -webkit-box-pack: @j;
+        -webkit-justify-content: @j;
+        -ms-flex-pack: @j;
     justify-content: @j;
 }
 
-.big-cont-flex(@j: 'flex-start'){
+.box-flex(@w: 100%, @j: center){
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap; 
+    width: @w;
+        -webkit-box-pack: @j;
+        -webkit-justify-content: @j;
+        -ms-flex-pack: @j;
     justify-content: @j;
 }
+
+.box-inl-flex(@w: 100%, @j: center){
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: @w;
+        -webkit-box-pack: @j;
+        -webkit-justify-content: @j;
+        -ms-flex-pack: @j;
+    justify-content: @j;
+}
+
 
 .text (@m:0, @fon-s: @f-s-sm, @c: @text-color, @lih: @l-h, @fw: normal, @fl: left){
     float: @fl;
