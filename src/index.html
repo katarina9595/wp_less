@@ -6,7 +6,10 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <title>WeekStyle</title>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
     <header class="clearfix">   
@@ -115,7 +118,7 @@
                 <div class="price">
                     $235.00
                 </div>
-                <div class="button clearfix">
+                <div class="button">
                     <a class="button_text" href="#">ADD TO BAG</a>
                 </div>
             </div>
@@ -149,7 +152,15 @@
            </div>
         </div>
     </footer>
-<script src="js/scripts.js"></script>
+    <script>
+        $('.button').click(function() {
+          var i = 1 - $('div').index( this );
+          $( this ).transfer( {
+            to: $('.header_bag').eq( i ),
+            duration: 1000
+          } );
+        });
+    </script>
 </body>
 </html>
 
