@@ -154,12 +154,17 @@
     </footer>
     <script>
         $('.button').click(function() {
-          var i = 1 - $('div').index( this );
-          $( this ).transfer( {
-            to: $('.header_bag').eq( i ),
-            duration: 1000
-          } );
+    $(this).transfer({
+        to: '.header_bag',
+        duration: 500,
+    }, function() {
+        $('.header_bag').effect('shake', {
+            direction: 'up',
+            times: 2,
+            distance: 5
         });
+    });
+});
     </script>
 </body>
 </html>
