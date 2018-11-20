@@ -1,108 +1,81 @@
-
 @path: '../img';
-@fonf: 'Marmelad', sans-serif;
-@fonf-wide: 'Gabriola', @fonf;
-@text-color: #342e2e;
-@main-color: #f76620;
+@fonf: 'Roboto', sans-serif;
+@text-color: #8A796E;
+@main-color: #000000;
+@l-h: 1em;
+@l-s: 0em;
+@f-s-l: 1rem;
+@f-s-sm: 0.875rem;
+@tal: left;
 
-.section-set(@pad: 0, @img: 'fon1'){
-    padding: @pad;
-    background: url('@{path}/@{img}.jpg') no-repeat center top;
-    background-size: cover;
+.big-cont-flex(@j: 'flex-start'){
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+    display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+    flex-flow: row wrap; 
+        -webkit-box-pack: @j;
+        -webkit-justify-content: @j;
+        -ms-flex-pack: @j;
+    justify-content: @j;
 }
 
-.logo(@m: 0){
-    float: left;
-    margin: @m;
-}
-
-.a(@color: @text-color, @ff: @fonf-wide, @fs: 24px, @lih: 1.25em, @lsp: 0em){
-    color: @color;
-    text-decoration: none;
-    font-family: @ff;
-    font-size: @fs;
-    font-weight: normal;
-    line-height: @lih;
-    letter-spacing: @lsp;
-    margin: 0;
-}
-
-.h3(@m:12px 0px 8px 0px, @fs:72px, @tal: left, @lih: 0.83em, @color: @main-color){
-    padding: 0;
-    margin: @m;
-    font-family:  @fonf-wide;
-    font-size: @fs;
-    text-align: @tal;
-    font-weight: normal;
-    line-height: @lih;
-    color: @color;
-}
-
-.h1(){
-    .h3(@m:300px 0px 40px 0px, @fs: 120px, @lih: 0.4em, @color: @text-color);
-    text-shadow: rgba(0,0,0,0.35) 0px 6px 10px;
-}
-
-.button-big(@m: 40px 0px 120px 5px, @w: 410px){
-    display: block;
-    border: 1.5px solid @main-color;
-    color: @main-color;
-    font-family: @fonf-wide;
-    font-size: 30px;
-    font-weight: normal;
+.box-flex(@w: 100%, @j: center){
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+    display: flex;
     width: @w;
-    text-align: center;
-    text-decoration: none;
-    margin: @m;
+        -webkit-box-pack: @j;
+        -webkit-justify-content: @j;
+        -ms-flex-pack: @j;
+    justify-content: @j;
 }
 
-.button-small(){
-    .button-big(@m:0, @w: 328px);
-    float: left;
+.box-inl-flex(@w: 100%, @j: center){
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: @w;
+        -webkit-box-pack: @j;
+        -webkit-justify-content: @j;
+        -ms-flex-pack: @j;
+    justify-content: @j;
 }
 
-.hr(){
-    border: 0;
-    background-color: @main-color;
-    width: 288px;
-    height: 2px;
-    float: left;
-}
 
-.p(@m:40px 0px, @ff: @fonf, @fs: 18px, @lih: 2em, @color: rgba(52,46,46,0.8), @lsp: 0.02em){
+.text (@m:0, @fon-s: @f-s-sm, @c: @text-color, @lih: @l-h, @fw: normal, @fl: left){
+    float: @fl;
     padding: 0;
     margin: @m;
-    font-family: @ff;
-    font-size: @fs;
-    text-align: left;
-    font-weight: normal;
-    line-height: @lih;  
-    color: @color;
-    letter-spacing: @lsp;
+    font-family:  @fonf;
+    font-size: @fon-s;
+    text-align: @tal;
+    font-weight: @fw;
+    line-height: @lih;
+    letter-spacing: @l-s;
+    color: @c;
+    text-decoration: none;
 }
 
-.city(){
-    width: 270px;
-    height: 414px;
-    float: left;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    margin-right: 150px; 
-    padding-top: 34px;  
+.line(@c:@main-color, @h: 0.0625rem){
 
-    &:nth-child(3){
-        margin-right: 0px;
-    }
-
-    &-img{
-        margin-bottom: 32px;
-    }
-
-    &-name{
-        .a(@ff: @fonf, @lsp: 0.02em, @lih: 1.5em);   
-
-        &:hover{
-            text-shadow: 1px 1px 3px @main-color;
+    &:after {
+        background-color: @c;
+        display: block;
+        margin: 0.1875rem auto;
+        content: "";
+        height: @h;
+        width: 0%;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
         }
-    }
+        &:hover:after,
+        &:focus:after {
+            width: 80%;
+        }
 }
